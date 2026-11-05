@@ -1,0 +1,291 @@
+{
+    "Login":{
+        "TitleFormLogin": "Acceso",
+        "DescFormLogin": "Ingrese sus credenciales para acceder al sistema",
+        "RecaptchaText": "Demuestra que no eres un robot",
+        "TitleFormResetPwd": "Recuperar mi contraseña",
+        "DescFormResetPwd": "Validacion de datos del usuario",
+        "SelectIdeTypField": "Seleccione tipo de identificación",
+        "BtnLoginSubmit": "Acceder",
+        "BtnLoginCancel": "¡He olvidado mi contraseña!",
+        "BtnVerify":"Verificar mis datos",
+        "BtnResetPwdCancel":"Atrás",
+        "DescFormSecQuestion":"Conteste la(s) pregunta(s) de seguridad para recuperar su contraseña",
+        "WrongUser": "Usuario o password incorrectos",
+        "EmptyUserPass": "Por favor Ingrese sus credenciales para acceder al sistema",
+        "CaptchaVerify": "Por favor marque el re-captcha",
+        "CaptchaErrorMessage": "Error en la validación del re-captcha",
+        "AttemptsBlocking": "Este usuario ha sido bloqueado porque ha superado el máximo de intentos para acceder al sistema. Por favor contacte al administrador del sistema.",
+        "InactivityBlocking": "El usuario ha sido bloqueado por inactividad. Por favor contacte al administrador del sistema.",
+        "ChangePwdRequired": "Para acceder al sistema, debe realizar el cambio obligatorio de su contraseña",
+        "UserDeleted": "Este usuario ha sido eliminado por el administrador del sisitema. Para acceder nuevamente contacte al Administrador del Sistema.",
+        "ForceChangePass": "Senor usuario, se ha completado 30 dias despues del ultimo cambio de su contraseña, por favor cambiela ahora mismo."
+    },
+    "Crud":{
+        "recordUpdated":"Se ha actualizado {{count}} registro correctamente",
+        "recordInserted":"Se ha agregado {{count}} registro correctamente",
+        "recordDeleted":"Se ha eliminado {{count}} registro correctamente",
+        "NonDeleted":"La petición falló y no se eliminó ningún registro",
+        "NonInserted":"La petición falló y no se agregó ningún registro. El server ha respondido con el siguiente codigo [{{CODE}}].",
+        "NonUpdated":"La petición falló y no se actualizó ningún registro. El server ha respondido con el siguiente codigo [{{CODE}}]"
+    },
+    "Modal":{
+        "Downloads":{
+            "Title":"Descargar Reporte",
+            "ThisView":"Solo esta vista",
+            "All":"Todo",
+            "ChooseFormat": "¿En cual formato?",
+            "AboutDownload": "¿Que desea descargar?",
+            "AddRemoveColumns": "¿Desea quitar o agregar columnas al reporte?",
+            "NameButton": "Descargar",
+            "Placeholder": "Descargar ésta información en formatos xls, xml, pdf, txt, csv"
+        },
+        "Columns":{
+            "NameButton": "Columnas",
+            "Placeholder": "Ver u ocultar columnas",
+            "Title":"Agregar o quitar columnas"
+        },
+        "Search":{
+            "NameButton": "Buscar",
+            "Placeholder": "Hacer una búsqueda específica en la base de datos",
+            "Title":"Buscar"
+        },
+        "Massive":{
+            "NameButton": "Carga masiva",
+            "Placeholder": "Cargar información desde un archivo plano",
+            "Title":"Carga masiva"
+        },
+        "ListView": {
+            "NameButton": "Ver registro",
+            "Placeholder": "",
+            "Title": "Vista registro"
+        }
+    },
+    "Button":{
+        "Cancel": "Cancelar",
+        "LoadFile": "Cargar archivo",
+        "Save": "Guardar",
+        "Close": "Cerrar",
+        "Download": "Descargar",
+        "Generate": "Generar"
+    },
+    "Customize":{
+        "Home": {
+            "Subtitle": "Página de inicio",
+            "Title": "Home",
+            "MsgHelpGrid":"",
+            "msgHelpForm":""
+        },
+        "Users": {
+            "Title": "Administración de usuarios",
+            "Subtitle": "Agrege, elimine, active o inactive los usuarios del sistema",
+            "MsgHelpGrid":"",
+            "MsgTitleForm": "Agregar/Editar usuarios",
+            "MsgHelpForm":"Agregue o edite los usuarios de la aplicación",
+            "Create": "Agregar usuario",
+            "Read": "Información usuario",
+            "Update": "Editar usuario",
+            "Delete": "Eliminar usuario",
+            "CreateDesc": null,
+            "ReadDesc": "Ver información del usuario",
+            "UpdateDesc": null,
+            "DeleteDesc": null,
+            "RecoveryPassword": "Recuperar contraseña"
+        },
+        "Cities":{
+            "Title": "Municipios / Ciudades",
+            "Subtitle": "Administre las ciudades y municipios de su país",
+            "MsgHelpGrid":"",
+            "MsgTitleForm": "Agregar/Editar una ciudad",
+            "MsgHelpForm":"Agregue nuevas ciudades o editelas en este formulario",
+            "Create": "Agregar ciudad",
+            "Read": "Información ciudad",
+            "Update": "Editar ciudad",
+            "Delete": "Eliminar ciudad",
+            "CreateDesc": null,
+            "ReadDesc": "Ver información de la ciudad",
+            "UpdateDesc": null,
+            "DeleteDesc": null
+        },
+        "UserTypes": {
+            "Title": "Tipos de usuarios",
+            "Subtitle": "Establezca tipos de usuarios",
+            "MsgHelpGrid":"",
+            "MsgTitleForm": "Agregar/Editar tipos de usuarios",
+            "MsgHelpForm":"Agregue nuevos tipos de usuarios o editelos en este formulario",
+            "Create": "Agregar tipo usuario",
+            "Read": "Información tipo usuario",
+            "Update": "Editar tipo usuario",
+            "Delete": "Eliminar tipo usuario",
+            "CreateDesc": null,
+            "ReadDesc": "Ver información del tipo de usuario",
+            "UpdateDesc": null,
+            "DeleteDesc": null           
+        },
+        "Dictionary":{
+            "Title": "Diccionario de datos",
+            "Subtitle": "Agregue y edite opciones del diccionario de datos",
+            "MsgHelpGrid":"",
+            "MsgTitleForm": "Agregar/Editar registros en diccionario",
+            "MsgHelpForm":"Agregue nuevos registros de diccionario o editelos en este formulario",
+            "Create": "Nuevo registro",
+            "Read": "Ver registro",
+            "Update": "Editar",
+            "Delete": "Eliminar ",
+            "CreateDesc": null,
+            "ReadDesc": "Ver información",
+            "UpdateDesc": null,
+            "DeleteDesc": null ,       
+            "GenerateFile":"Generar archivo",
+            "GenerateFileText":"Generar archivo",
+            "GenerarFileDictionaryText": "¿Está seguro de generar el archivo Dictionary.json?, ésto podría tener graves cambios en la aplicación o quizá ésta no funcione correctamente."
+        },
+        "Menu":{
+            "BtnAdd": "Nuevo",
+            "BtnAddDesc": "Abrir formulario para agregar una nueva opción de menú",
+            "BtnEdit": "Editar",
+            "BtnEditDesc": "Abrir formulario para editar ésta opción de menú",
+            "BtnDelete": "Eliminar",
+            "BtnDeleteDesc": "Eliminar ésta opción de menú",
+            "BtnInfo": "Ver",
+            "BtnInfoDesc": "Ver toda la información de ésta opción de menú",
+            "WarningAdd":"¿Confirma que desea agregar una nueva opción de menú?",
+            "WarningEdit":"¿Confirma que desea editar la opción de menú?",
+            "WarningDelete":"¿Confirma que desea eliminar la opción de menú?",
+            "Title": "Menú de opciones",
+            "Subtitle": "Establezca las opciones de menu",
+            "MsgHelpGrid": "Senor usuario, si agrega una nueva opcion de menu, por favor ejecute los siguientes pasos:<br>1. Agregue la nueva opcion de menu.<br>2. Ejecute la perfilacion.<br>3. Genere las opciones de menu desde esta vista.",
+            "msgHelpForm":"",
+            "GenerateFile":"Generar archivo",
+            "GenerateFileText":"Generar archivo",
+            "GenerarFileMenuText":"¿Está seguro de generar archivo de menu?"
+        },
+        "Align": {
+            "BtnAdd": "Nuevo",
+            "BtnAddDesc": "Abrir formulario para agregar un nuevo tipo de alineación",
+            "BtnEdit": "Editar",
+            "BtnEditDesc": "Abrir formulario para editar éste tipo de alineación",
+            "BtnDelete": "Eliminar",
+            "BtnDeleteDesc": "Eliminar éste tipo de alineación",
+            "BtnInfo": "Ver",
+            "BtnInfoDesc": "Ver toda la información de éste tipo de alineación",
+            "WarningAdd":"¿Confirma que desea agregar un nuevo tipo de alineación?",
+            "WarningEdit":"¿Confirma que desea editar el tipo de alineación?",
+            "WarningDelete":"¿Confirma que desea eliminar el tipo de alineación?",
+            "Title": "Tipos de alineación",
+            "Subtitle": "Establezca tipos de alineación de la aplicación",
+            "MsgHelpGrid":"",
+            "msgHelpForm":""  
+        },
+        "SecurityQuestions": {
+            "BtnAdd": "Nuevo",
+            "BtnAddDesc": "Abrir formulario para agregar un nueva pregunta",
+            "BtnEdit": "Editar",
+            "BtnEditDesc": "Abrir formulario para editar éste pregunta de seguridad",
+            "BtnDelete": "Eliminar",
+            "BtnDeleteDesc": "Eliminar ésta pregunta de seguridad",
+            "BtnInfo": "Ver",
+            "BtnInfoDesc": "Ver toda la información de ésta pregunta de seguridad",
+            "WarningAdd":"¿Confirma que desea agregar una nueva pregunta de seguridad?",
+            "WarningEdit":"¿Confirma que desea editar la pregunta de seguridad?",
+            "WarningDelete":"¿Confirma que desea eliminar la pregunta de seguridad?",
+            "Title": "Preguntas de seguridad",
+            "Subtitle": "Establezca las preguntas de seguridad de la aplicación",
+            "MsgHelpGrid":"",
+            "msgHelpForm":""  
+        },
+        "Icons":{
+            "BtnAdd": "Nuevo",
+            "BtnAddDesc": "Abrir formulario para agregar un nuevo ícono",
+            "BtnEdit": "Editar ícono",
+            "BtnEditDesc": "Abrir formulario para editar éste ícono",
+            "BtnDelete": "Eliminar ícono",
+            "BtnDeleteDesc": "Eliminar éste ícono",
+            "BtnInfo": "Ver ícono",
+            "BtnInfoDesc": "Ver toda la información de éste ícono",
+            "WarningAdd":"¿Confirma que desea agregar un nuevo ícono?",
+            "WarningEdit":"¿Confirma que desea editar el ícono?",
+            "WarningDelete":"¿Confirma que desea eliminar el ícono?",
+            "Title": "Iconos",
+            "Subtitle": "Gestione los íconos de la aplicación",
+            "MsgHelpGrid":"",
+            "msgHelpForm":"",
+            "GenerateFile":"GenerarArchivo",
+            "GenerarFileIconsText":"¿Está seguro de generar el archivo?"
+        },
+        "States": {
+            "Title": "Departamentos / Estados",
+            "Subtitle": "Administre los departamentos/estados de su país",
+            "MsgHelpGrid":"",
+            "MsgTitleForm": "Agregar/Editar un departamento",
+            "MsgHelpForm":"Agregue nuevos departamentos o editelos en este formulario",
+            "Create": "Agregar departamento",
+            "Read": "Información departamento",
+            "Update": "Editar departamento",
+            "Delete": "Eliminar departamento",
+            "CreateDesc": null,
+            "ReadDesc": "Ver información de la departamento",
+            "UpdateDesc": null,
+            "DeleteDesc": null
+        }
+    },
+    "Validate":{
+        "emptyParameter":"Error en llamado de API. Faltó definir el parámetro [{{parameter}}]",
+        "RestrictedAccessCreate":"El usuario no tiene permisos para crear este recurso",
+        "EmptyParams":"falta el parámetro [page]",
+        "errorDataType": "El dato [{{value}}] del campo [{{field}}] no es correcto para un tipo de dato [{{datatype}}]>",
+        "emptyField": "El campo [{{desc}}] es obligatorio",
+        "exceedsLength": "El valor del campo [{{desc}}] excede el número de caracteres permitido [{{length}} chars]",
+        "wrongDate": "Fecha incorrecta [{{value}}] para el campo [{{field}}]."
+    },
+    "CustomValidation": {
+        "wrong_document":"El número de documento ({{value}}) es incorrecto debe ser de tipo numérico, no debe tener caracteres especiales y no debe comenzar por cero (0).",
+        "min_max_document":"El número de documento ({{value}}) debe contener entre ({{minLengthDoc}}) y ({{length}}) dígitos.",
+        "nonZero_document":"El número de documento ({{value}}) no debe comenzar por el número ({{value}}).",
+        "nine_digits_document":"El número de documento ({{value}}) no debe ser de nueve(9) dígitos.",
+        "errorName":"El [{{desc}}] no puede contener números o caracteres extraños.",
+        "errorAddress":"La dirección no tiene un formato válido.",
+        "errorEmail":"El correo electrónico ({{value}}) no tiene un formato válido, ejm: mail@mail.com",
+        "incorrectDate":"La fecha ({{date}}) es incorrecta.",
+        "emptyDate":"La fecha es obligatoria.",
+        "emptyField":"El {{field}} es obligatorio.",
+        "incorrectPassword":"El password debe contener entre {{min}} y {{max}} caracteres",
+        "wrongNumberPhone":"El número de teléfono ({{value}}) debe contener {{length}} dígitos y no debe comenzar por (0) o (1)",
+        "minLenNumberPhone":"El número de teléfono ({{value}}) no debe superar los ({{length}}) dígitos.",
+        "maxLenNumberPhone":"El número de teléfono ({{value}}) no debe ser menor a ({{length}}) dígitos.",
+        "nonStartCell":"El número de celular ({{value}}) debe comenzar por el número tres (3).",
+        "maxLenCell":"'El número de celular ({{value}}) no debe tener más de diez ({{length}}) dígitos.",
+        "minLenCell":"El número de celular ({{value}}) no debe tener menos de diez ({{length}}) dígitos."
+    },
+    "Confirm": {
+        "Add": "¿Confirma que desea agregar este registro?",
+        "Delete": "¿Confirma que desea eliminrar este registro?",
+        "Update": "¿Confirma que desea actualizar este registro?"
+    },
+    "Warning": {
+        "Create": "¿Confirma que desea agregar este registro?",
+        "Update": "¿Confirma que desea actualizar este registro?",
+        "Delete": "Confirma que desea eliminar el registro id: ",
+        "DeleteDirectory": "¿Esta seguro de eliminar este directorio y todo su contenido?",
+        "DeleteFile": "¿Esta seguro de eliminar este archivo?"
+    },
+    "pagination": {
+        "showInfo":"Mostrando registros del {{startFrom}} al {{to}} de {{rowsTable}} registros. Página ({{startPage}}/{{finalPage}})",
+        "goToFirtsPage":"Ir a la primera página",
+        "goToBackPage":"Ir a la página anterior",
+        "currentPage":"Estás en la página {{page}}",
+        "goToPage":"Ir a la página {{page}}",
+        "goToNextPage":"Ir a la página siguiente",
+        "goToLastPage":"Ir a la última página"
+    },
+    "Table":{
+        "actionColumnText":"Acción",
+        "EmptyResult": "¡Vaya! No hay ningun resultado."
+    },
+    "Error":{
+        "ResultQueryEmpty": "La consulta del registró no arrojó ningún valor"
+    },
+    "Success":{
+        "FileGenerated": "Archivo generado exitosamente"
+    }
+}

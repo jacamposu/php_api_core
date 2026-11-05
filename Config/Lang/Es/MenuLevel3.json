@@ -1,0 +1,13 @@
+{
+	"1":{
+		"MenId" : "60a837ff4e008", 
+		"MenName" : "prueba", 
+		"MenMenuType" : "L", 
+		"MenMenuLevel" : "3",  
+		"MenParentMenu" : "60a824153c746", 
+		"MenState" : "1", 
+		"MenUrl" : "States/All/", 
+		"MenParams" : "", 
+		"MenIcon" : "fas fa-globe-americas"
+	}
+}
