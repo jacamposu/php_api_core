@@ -29,6 +29,10 @@ class Environment
 				->SetParams($params);
 		$result = $this->_headersDB->Get($this->_config, $this->_headersDB, $this->_session);
 
+		if(empty($result)){
+			throw new Exception("falla en la consulta de GetUserType_Photo", 404);
+		}
+
 		$userType = $result->result->data->IdUserTypeUser;
 		$UsePhoto = $result->result->data->UsrPhoto;
 
