@@ -107,17 +107,51 @@ class MenuController extends MainGenericController
 	{
 		try
 		{
+			$ulrProject = "http://localhost/Prototipo/";
 			$headers = new HttpDatabase($this->_config);
-			$headers->SetModel('MenuModel')->SetResoruceModel('GenerateMenu')->SetWithoutLimit();
-			$totalRecords = $headers->Get();
-			if(is_null($totalRecords)) throw new Exception("No se ha generado información para generar los archivos", 400);
-			$menuList = $totalRecords->result->data;
-			$fileName = $this->_config->path->pathApp.'/Config/Lang/Es/Menu.json';
-			file_put_contents($fileName, json_encode($menuList));
+
+			/* Obtener la lista de perfiles */
+			$headers->SetModel('UserTypesModel')->SetResoruceModel('Profiles')->SetWithoutLimit();
+			$profiles = $headers->Get();
+
+			if(is_null($profiles)) 
+				throw new Exception("No existen perfiles para generar los archivos", 400);
+		
+			$profiles = $profiles->result->data;
+
+			
+
+			
+
+			foreach ($profiles as $profile) {
+				/* Obtener la lista de menús */
+				$params = [
+					':profileUser' => $profile->UtId
+				];
+
+				$headers->SetModel('MenuModel')->SetResoruceModel('GenerateMenu')->SetParams($params)->SetWithoutLimit();
+				$menuList = $headers->Get();
+
+				print_r($menuList);die();
+
+
+				if(is_null($menuList)) 
+					throw new Exception("No se ha generado información para generar los archivos", 400);
+
+				$menuList = $menuList->result->data;
+
+
+
+				$menu = $this->BuilFileMenu($menuList, $ulrProject, $profile->UtId);
+
+				$fileName = /*$this->_config->path->pathApp.*/'D:/DEV/Prototipo/Templates/Menu_'.$profile->UtId.'.html';
+				file_put_contents($fileName, $menu);
+			}
+
 
 			$this->_response->Response(200, [
 				'title' => 'Archivo generado exitosamente',
-				'text' => 'Se han generado los archivos: MenuLevel1.json, MenuLevel2.json, MenuLevel3.json, para los proyectos: ApirCore y Prototipo',
+				'text' => 'Se han generado el archivo Menu.htm correctamente.',
 				'icon' => 'success'
 			]);
 		}catch(Exception $ex)
@@ -128,6 +162,51 @@ class MenuController extends MainGenericController
 				'icon' => 'error'
 			]);
 		}
+	}
+
+	private function BuilFileMenu($menuList, $ulrProject, $profileId)
+	{
+		$div = '';
+
+		foreach ($menuList as $key => $menu) {				
+			if($menu->MeMenuLevel == 1 && $menu->MeMenuType == 1 && $menu->IdUserTypeProfile == $profileId){
+				$submenuOptions = ''; 
+				$submenuOptionsFloat = '';
+
+				foreach ($menuList as $keyS => $submenu){
+					if($submenu->MeMenuLevel == 2 && $submenu->IdParentMenu == $menu->IdParentMenu){
+						$url = $ulrProject.$submenu->MeUrl;
+						$submenuOptions .= '<a href="'.$url.'">';
+						// $submenuOptions .= '<i class="'.$submenu->IcFontAwesome.'"></i> ';
+						$submenuOptions .= $submenu->MeName;
+						$submenuOptions .= '</a>';
+						$submenuOptionsFloat .= '<a href="'.$url.'" data-title="Cambios BD" style="text-decoration: none;">';
+						// $submenuOptionsFloat .= '<i class="'.$submenu->IcFontAwesome.'"></i> ';
+						$submenuOptionsFloat .= $submenu->MeName;
+						$submenuOptionsFloat .= '</a>';
+					}
+				}
+
+				$div .= '<div class="menu-item">';
+				$div .= '<div class="menu-link">';
+				$div .= '<div class="menu-content">';
+				$div .= '<i class="'.$menu->IcFontAwesome.'"></i>';
+				$div .= '<span>'.$menu->MeName.'</span>';
+				$div .= '</div>';
+				$div .= '<i class="fas fa-chevron-down arrow"></i>';
+				$div .= '</div>';
+				$div .= '<div class="submenu">';
+				$div .= $submenuOptions;
+				$div .= '</div>';
+				$div .= '<div class="floating-submenu">';
+				$div .= '<div class="floating-title">'.$menu->MeName.'</div>';
+				$div .= $submenuOptionsFloat;
+				$div .= '</div>';
+				$div .= '</div>';
+			}
+		}
+
+		return $div;
 	}
 
 	// public function DeleteMenu()
