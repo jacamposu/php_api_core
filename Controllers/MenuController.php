@@ -107,7 +107,6 @@ class MenuController extends MainGenericController
 	{
 		try
 		{
-			$ulrProject = "http://localhost/Prototipo/";
 			$headers = new HttpDatabase($this->_config);
 
 			/* Obtener la lista de perfiles */
@@ -119,35 +118,21 @@ class MenuController extends MainGenericController
 		
 			$profiles = $profiles->result->data;
 
-			
+			/* obtener la data de menu */
+			$headers->SetModel('MenuModel')->SetResoruceModel('GenerateMenu')->SetWithoutLimit();
+			$menuList = $headers->Get();
 
-			
+			if(is_null($menuList)) 
+				throw new Exception("No se ha generado información para generar los archivos", 400);
 
-			foreach ($profiles as $profile) {
-				/* Obtener la lista de menús */
-				$params = [
-					':profileUser' => $profile->UtId
-				];
+			$menuList = $menuList->result->data;
 
-				$headers->SetModel('MenuModel')->SetResoruceModel('GenerateMenu')->SetParams($params)->SetWithoutLimit();
-				$menuList = $headers->Get();
-
-				print_r($menuList);die();
-
-
-				if(is_null($menuList)) 
-					throw new Exception("No se ha generado información para generar los archivos", 400);
-
-				$menuList = $menuList->result->data;
-
-
-
-				$menu = $this->BuilFileMenu($menuList, $ulrProject, $profile->UtId);
-
-				$fileName = /*$this->_config->path->pathApp.*/'D:/DEV/Prototipo/Templates/Menu_'.$profile->UtId.'.html';
+			foreach ($profiles as $profile)
+			{
+				$menu = $this->BuilFileMenu($menuList, $this->_config->url->app_front, $profile->UtId);
+				$fileName = $this->_config->path->pathFront.'/Templates/Menu_'.$profile->UtId.'.html';
 				file_put_contents($fileName, $menu);
 			}
-
 
 			$this->_response->Response(200, [
 				'title' => 'Archivo generado exitosamente',

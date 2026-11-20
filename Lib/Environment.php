@@ -36,10 +36,8 @@ class Environment
 		$userType = $result->result->data->IdUserTypeUser;
 		$UsePhoto = $result->result->data->UsrPhoto;
 
-		$menu = new Menu($userType);
 
 		return [
-			'linksMenu' => $menu->LinksMenu(),
 			'pathPhoto' => !empty($UsePhoto) ? $UsePhoto : $this->_config->app->defaultPhoto
 		]; 
 	}
